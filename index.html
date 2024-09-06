@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="root">
+        <div class="calendary displayFlex flexColumn">
+            <header class="band displayFlex">
+                <h2>
+                    <span id="month"></span>
+                    <span class="de"></span>
+                    <span id="year"></span>
+                </h2>
+            </header>
+            <div class="container displayFlex flexColumn">
+                <div class="bandDay displayFlex">
+                    <div class="divDay">
+                        <div class="day displayFlex flexColumn alignItems justifyCenter">
+                            <span id="sunday0" class="dayName">Dom.</span>
+                            <span id="sunday" class="dayNumber"></span>
+                        </div>
+                    </div>
+                    <div id="content" class="content displayFlex flexColumn alignItems justifyCenter">
+                        <div id="example" class="contentExample displayFlex flexColumn">
+                            <span style="width: 100%;" class="displayFlex justifyBetween" >
+                                <h3 id="titleContent" style="margin: 5px; margin-left: 10px;">s</h3>
+                                <div class="buttonsEdit displayFlex justifyEvenly">
+                                    <button type="button" id="edit" class="editB edit displayFlex alignItems justifyCenter"><img src="./assets/editar.png" style="width: 10px;"></button>
+                                    <button type="button" id="delete" class="delete edit displayFlex alignItems justifyCenter" style="font-size: 10px;">X</button>
+                                </div>  
+                            </span>
+                            <p id="descriptionContent" style="margin: 5px; margin-left: 10px">sss</p>
+                        </div>
+                        <button type="button" id="addEvent" class="add displayFlex alignItems justifyCenter"
+                            onclick="addElementDom()">
+                            <p class="plusButton">+</p>
+                        </button>
+                        <div id="box3" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box2" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box1" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="bandDay displayFlex">
+                    <div class="divDay">
+                        <div class="day displayFlex flexColumn alignItems justifyCenter">
+                            <span id="monday1" class="dayName">Seg.</span>
+                            <span id="monday" class="dayNumber"></span>
+                        </div>
+                    </div>
+                    <div class="content displayFlex flexColumn alignItems justifyCenter">
+                        <button type="button" id="addEvent" class="add displayFlex alignItems justifyCenter"
+                            onclick="addElementSeg()">
+                            <p class="plusButton">+</p>
+                        </button>
+                        <div id="box6" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box5" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box4" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="bandDay displayFlex">
+                    <div class="divDay">
+                        <div class="day displayFlex flexColumn alignItems justifyCenter">
+                            <span id="tuesday2" class="dayName">Ter.</span>
+                            <span id="tuesday" class="dayNumber"></span>
+                        </div>
+                    </div>
+                    <div class="content displayFlex flexColumn alignItems justifyCenter">
+                        <button type="button" id="addEvent" class="add displayFlex alignItems justifyCenter"
+                            onclick="addElementTer()">
+                            <p class="plusButton">+</p>
+                        </button>
+                        <div id="box9" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box8" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box7" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="bandDay displayFlex">
+                    <div class="divDay">
+                        <div class="day displayFlex flexColumn alignItems justifyCenter">
+                            <span id="wednesday3" class="dayName">Qua.</span>
+                            <span id="wednesday" class="dayNumber"></span>
+                        </div>
+                    </div>
+                    <div class="content displayFlex flexColumn alignItems justifyCenter">
+                        <button type="button" id="addEvent" class="add displayFlex alignItems justifyCenter"
+                            onclick="addElementQua()">
+                            <p class="plusButton">+</p>
+                        </button>
+                        <div id="box12" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box11" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box10" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="bandDay displayFlex">
+                    <div class="divDay">
+                        <div class="day displayFlex flexColumn alignItems justifyCenter">
+                            <span id="thursday4" class="dayName">Qui.</span>
+                            <span id="thursday" class="dayNumber"></span>
+                        </div>
+                    </div>
+                    <div class="content displayFlex flexColumn alignItems justifyCenter">
+                        <button type="button" id="addEvent" class="add displayFlex alignItems justifyCenter"
+                            onclick="addElementQui()">
+                            <p class="plusButton">+</p>
+                        </button>
+                        <div id="box15" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box14" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box13" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="bandDay displayFlex">
+                    <div class="divDay">
+                        <div class="day displayFlex flexColumn alignItems justifyCenter">
+                            <span id="friday5" class="dayName">Sex.</span>
+                            <span id="friday" class="dayNumber"></span>
+                        </div>
+                    </div>
+                    <div class="content displayFlex flexColumn alignItems justifyCenter">
+                        <button type="button" id="addEvent" class="add displayFlex alignItems justifyCenter"
+                            onclick="addElementSex()">
+                            <p class="plusButton">+</p>
+                        </button>
+                        <div id="box18" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box17" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box16" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="bandDay displayFlex">
+                    <div class="divDay">
+                        <div class="day displayFlex flexColumn alignItems justifyCenter">
+                            <span id="saturday6" class="dayName">Sab.</span>
+                            <span id="saturday" class="dayNumber"></span>
+                        </div>
+                    </div>
+                    <div class="content displayFlex flexColumn alignItems justifyCenter">
+                        <button type="button" id="addEvent" class="add displayFlex alignItems justifyCenter"
+                            onclick="addElementSab()">
+                            <p class="plusButton">+</p>
+                        </button>
+                        <div id="box21" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box20" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                        <div id="box19" class="contentPriority displayFlex flexColumn alignItems justifyCenter"></div>
+                    </div>
+                </div>
+                <div id="popUpCard" class="popUp">
+                    <form id="form" class="popUpContent displayFlex flexColumn">
+                        <div id="popUpCardHeader" class="headPopUp displayFlex alignItems">
+                            <button type="button" onclick="cancelAction()" id="cancelButton"
+                                class="cancelButton">Cancelar</button>
+                            <span class="displayFlex flexColumn alignItems" style="margin-top: 5px;">
+                                <p><strong>Novo Evento</strong></p>
+                                <p id="dayOfWeek" style="font-size: 0.675rem;font-style: italic;"></p>
+                            </span>
+                            <button type='submit' id="copyButton" class="addButton"><strong>Salvar</strong></button>
+                        </div>
+                        <div class="popUpContent displayFlex flexColumn">
+
+                            <div class="popUpDescription displayFlex flexColumn alignItems">
+                                <div class="divTitle displayFlex alignItems">
+                                    <span><strong>Título:</strong></span>
+                                    <span><input type="text" id="tittle" required></span>
+                                </div>
+                                <hr style="width: 90%; margin: auto; background-color: #D3D3D3; margin:0;">
+                                <div class="divDescription displayFlex alignItems">
+                                    <span><strong>Descrição:</strong></span>
+                                    <span><textarea type="text" id="description"></textarea></span>
+                                </div>
+                            </div>
+                            <div class="priorityDegree displayFlex alignItems">
+                                <span class="priorityDegreeTitle"><strong>Grau de Prioridade:</strong></span>
+                                <div class="selectPriority displayFlex alignItems" onclick="selectPriority()">
+                                    <div id="priorityColor" class="priorityColorDiv" style="margin-left: 3px;"></div>
+                                    <span id="priorityName" style="margin-left: 5px;"></span>
+                                </div>
+                                <div id="dropBoxPriority" class="dropBoxPriorityClass displayFlex flexColumn">
+                                    <button type="button" class="buttonPriority displayFlex alignItems"
+                                        onclick="lowPriority(); selectBox(num)">
+                                        <div class="lowPriority"></div>
+                                        <span style="margin-left: 5px;">Baixa</span>
+                                    </button>
+                                    <button type="button" class="buttonPriority displayFlex alignItems"
+                                        onclick="medPriority(); selectBox(num + 1)">
+                                        <div class="medPriority"></div>
+                                        <span style="margin-left: 5px;">Intermediária</span>
+                                    </button>
+                                    <button type="button" class="buttonPriority displayFlex alignItems"
+                                        onclick="highPriority(); selectBox(num + 2)">
+                                        <div class="highPriority"></div>
+                                        <span style="margin-left: 5px;">Alta</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="popUpColors displayFlex alignItems ">
+                                <span><strong>Cor:</strong></span>
+                                <div class="eventColorDiv displayFlex alignItems justifyCenter" onclick="selectColor()">
+                                    <div id="eventColor" class="eventColorClass"></div>
+                                </div>
+                            </div>
+                            <div id="dropBoxColors"
+                                class="dropBoxColorsClass displayFlex flexColumn alignItems justifyEvenly">
+                                <div style="width: 100%;" class="displayFlex justifyEvenly">
+                                    <div class="eventColorDiv displayFlex alignItems justifyCenter"
+                                        onclick="eventColorGold()">
+                                        <button type="button" id="eventColorGold" class="eventColorClass"
+                                            data-color="#FFD700"></button>
+                                    </div>
+                                    <div class="eventColorDiv displayFlex alignItems justifyCenter"
+                                        onclick="eventColorBlue()">
+                                        <button type="button" id="eventColorBlue" class="eventColorClass"
+                                            data-color="#0000FF"></button>
+                                    </div>
+                                    <div class="eventColorDiv displayFlex alignItems justifyCenter"
+                                        onclick="eventColorPink()">
+                                        <button type="button" id="eventColorPink" class="eventColorClass"
+                                            data-color="#FFC0CB"></button>
+                                    </div>
+                                    <div class="eventColorDiv displayFlex alignItems justifyCenter"
+                                        onclick="eventColorPurple()">
+                                        <button type="button" id="eventColorPurple" class="eventColorClass"
+                                            data-color="#A020F0"></button>
+                                    </div>
+                                    <div class="eventColorDiv displayFlex alignItems justifyCenter"
+                                        onclick="eventColorOrange()">
+                                        <button type="button" id="eventColorOrange" class="eventColorClass"
+                                            data-color="#FFA500"></button>
+                                    </div>
+                                </div>
+                                <div style="width: 100%;" class="displayFlex justifyEvenly">
+                                    <div class="eventColorDiv displayFlex alignItems justifyCenter"
+                                        onclick="eventColorCornFlowerBlue()">
+                                        <button type="button" id="eventColorCornFlowerBlue" class="eventColorClass"
+                                            data-color="#6495ED"></button>
+                                    </div>
+                                    <div class="eventColorDiv displayFlex alignItems justifyCenter"
+                                        onclick="eventColorGreen()">
+                                        <button type="button" type="button" id="eventColorGreen" class="eventColorClass"
+                                            data-color="#00FF00"></button>
+                                    </div>
+                                    <div class="eventColorDiv displayFlex alignItems justifyCenter"
+                                        onclick="eventColorAquamarine()">
+                                        <button type="button" id="eventColorAquamarine" class="eventColorClass"
+                                            data-color="#7FFFD4"></button>
+                                    </div>
+                                    <div class="eventColorDiv displayFlex alignItems justifyCenter"
+                                        onclick="eventColorBrown()">
+                                        <button type="button" id="eventColorBrown" class="eventColorClass"
+                                            data-color="#A52A2A"></button>
+                                    </div>
+                                    <div class="eventColorDiv displayFlex alignItems justifyCenter"
+                                        onclick="eventColorLime()">
+                                        <button type="button" id="eventColorLime" class="eventColorClass"
+                                            data-color="#32CD32"></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
